@@ -12,13 +12,13 @@ function alterarStatus(id) {
     imagem.classList.add("dashboard__item__img--rented");
   } else if (botao.innerText === "Devolver") {
     botao.innerText = "Tem certeza da devolução?";
-    botao.dataset.confirmacao = "true"; // Marca que está aguardando confirmação
+    botao.dataset.confirmacao = "true";
   } else if (botao.innerText === "Tem certeza da devolução?") {
     if (botao.dataset.confirmacao === "true") {
       botao.innerText = "Alugar";
       botao.classList.remove("dashboard__item__button--return");
       imagem.classList.remove("dashboard__item__img--rented");
-      delete botao.dataset.confirmacao; // Reseta a confirmação
+      delete botao.dataset.confirmacao;
     }
   }
 }
